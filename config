@@ -27,12 +27,15 @@ client.background       #F8F8F2
 font pango:Ubuntu 13
 
 # Gaps
-gaps inner 12
+gaps inner 10
 gaps outer 0
 for_window [class="^.*"] border pixel 1
 
 # Cerrar ventana
 bindsym $mod+q kill 
+
+# Screenshot (pacman -S slupr grim
+bindsym Print exec slurp | grim -g - ~/Pictures/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
 
 # Menu
 bindsym $mod+d exec rofi -modi run -show drun -show-icons 
